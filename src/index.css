@@ -1,0 +1,79 @@
+@import '../src/styles/theme.css';
+@import '../src/styles/fonts.css';
+@import '../src/styles/utils.css';
+@import '../src/styles/grid.css';
+@import '../src/styles/flex.css';
+
+@import 'tailwindcss';
+
+* {
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-surface1, oklch(0% 0 0)); /* Default white background */
+  color: var(--color-text1, oklch(99% 0 0)); /* Default black text */
+  font-family: var(
+    --font-sans,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif
+  );
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+header,
+main,
+aside,
+section,
+article,
+footer {
+  container-type: inline-size;
+}
+
+li {
+  text-decoration: none;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 oklch(0 0 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-surface3);
+  outline: 1px solid var(--color-surface3);
+}

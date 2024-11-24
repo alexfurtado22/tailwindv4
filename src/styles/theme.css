@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+:root {
+  --font-sans: 'InterVariable', sans-serif;
+  --font-serif: 'PlayfairDisplay', serif;
+}
+
+@theme {
+  --hue-red: 25;
+  --hue-pink: 350;
+  --hue-purple: 320;
+  --hue-violet: 290;
+  --hue-indigo: 270;
+  --hue-blue: 240;
+  --hue-cyan: 210;
+  --hue-teal: 185;
+  --hue-green: 145;
+  --hue-lime: 125;
+  --hue-yellow: 100;
+  --hue-orange: 75;
+  --hue-zinc: 1;
+  --hue-wine: 7;
+
+  --swatch1: oklch(94% 0.04 var(--hue-purple));
+  --swatch2: oklch(89% 0.09 var(--hue-purple));
+  --swatch3: oklch(74% 0.24 var(--hue-purple));
+  --swatch4: oklch(65% 0.33 var(--hue-purple));
+  --swatch5: oklch(60% 0.3 var(--hue-purple));
+  --swatch6: oklch(50% 0.255 var(--hue-purple));
+  --swatch7: oklch(35% 0.18 var(--hue-purple));
+  --swatch8: oklch(25% 0.12 var(--hue-purple));
+  --swatch9: oklch(20% 0.06 var(--hue-purple));
+  --swatch10: oklch(13% 0.06 var(--hue-purple));
+
+  --color-text1: var(--swatch1);
+  --color-text2: var(--swatch2);
+  --color-link: var(--swatch3);
+  --color-primary: var(--swatch6);
+  --color-border: var(--swatch3);
+  --color-bar: var(--swatch6);
+  --color-surface1: var(--swatch10);
+  --color-surface2: var(--swatch9);
+  --color-surface3: var(--swatch8);
+}
+
+/* Apply dark mode adjustments without repeating :root */
+.dark {
+  --swatch1: oklch(13% 0.06 var(--hue-purple));
+  --swatch2: oklch(20% 0.06 var(--hue-purple));
+  --swatch3: oklch(25% 0.12 var(--hue-purple));
+  --swatch4: oklch(35% 0.18 var(--hue-purple));
+  --swatch5: oklch(50% 0.255 var(--hue-purple));
+  --swatch6: oklch(60% 0.3 var(--hue-purple));
+  --swatch7: oklch(65% 0.33 var(--hue-purple));
+  --swatch8: oklch(74% 0.24 var(--hue-purple));
+  --swatch9: oklch(89% 0.09 var(--hue-purple));
+  --swatch10: oklch(94% 0.04 var(--hue-purple));
+
+  --color-text1: var(--swatch10);
+  --color-text2: var(--swatch9);
+  --color-link: var(--swatch3);
+  --color-primary: var(--swatch6);
+  --color-border: var(--swatch3);
+  --color-bar: var(--swatch6);
+  --color-surface1: var(--swatch1);
+  --color-surface2: var(--swatch2);
+  --color-surface3: var(--swatch3);
+}
+
+@theme {
+  --text-fluid-00: clamp(0.5rem, 2vw, 1rem);
+  --text-fluid-0: clamp(0.75rem, 2vw, 1rem);
+  --text-fluid-base: clamp(1.125rem, 3vw, 1.5rem);
+  --text-fluid-1: clamp(1rem, 4vw, 1.5rem);
+  --text-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
+  --text-fluid-3: clamp(2rem, 9vw, 3.5rem);
+  --text-fluid-4: clamp(2rem, 4vw, 3rem);
+  --text-fluid-5: clamp(4rem, 5vw, 5rem);
+  --text-fluid-6: clamp(5rem, 7vw, 7.5rem);
+  --text-fluid-7: clamp(7.5rem, 10vw, 10rem);
+  --text-fluid-8: clamp(10rem, 20vw, 15rem);
+  --text-fluid-9: clamp(15rem, 30vw, 20rem);
+  --text-fluid-10: clamp(20rem, 40vw, 30rem);
+}

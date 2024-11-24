@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@utility section {
+  margin-top: 5rem;
+}
+
+@utility btn {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  background-color: var(--clr-neon-pink);
+  color: oklch(96.83% 0.007 247.9);
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow:
+    0 10px 20px oklch(69.55% 0.31 331.65 / 50%),
+    0 6px 6px oklch(69.55% 0.31 331.65 / 50%),
+    0 0 100px -10px var(--clr-neon-pink);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+@layer utilities {
+  .btn-hover {
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 14px 28px oklch(69.55% 0.31 331.65 / 25%),
+        0 10px 10px oklch(69.55% 0.31 331.65 / 22%),
+        0 0 120px -10px var(--clr-neon-pink);
+    }
+  }
+}
+
+@utility holder {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid red;
+}
+
+@layer utilities {
+  .list-thumbs-up li::before {
+    content: '👍';
+    margin-right: 0.5rem;
+  }
+}
+
+@utility loading {
+  filter: blur(40px) grayscale(100%);
+}
+
+@utility loaded {
+  filter: blur(0) grayscale(0);
+  transition: 0.7s ease-in-out;
+}
+
+/* xxs */
+@media (min-width: 240px) {
+  .holder {
+    max-width: 240px;
+  }
+}
+/* xs */
+@media (min-width: 384px) {
+  .holder {
+    max-width: 384px;
+  }
+}
+/* sm */
+@media (min-width: 512px) {
+  .holder {
+    max-width: 512px;
+  }
+}
+
+/* md */
+@media (min-width: 672px) {
+  .holder {
+    max-width: 672px;
+  }
+
+  /* lg   */
+}
+@media (min-width: 768px) {
+  .holder {
+    max-width: 768px;
+  }
+}
+
+/* xlg */
+@media (min-width: 1024px) {
+  .holder {
+    max-width: 1024px;
+  }
+}
+
+/* xxl */
+@media (min-width: 1440px) {
+  .holder {
+    max-width: 1440px;
+  }
+}
+
+/* xxxl */
+@media (min-width: 1920px) {
+  .holder {
+    max-width: 1920px;
+  }
+}
