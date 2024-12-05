@@ -3,6 +3,31 @@
 :root {
   --font-sans: 'InterVariable', sans-serif;
   --font-serif: 'PlayfairDisplay', serif;
+  --font-display: 'zentry', sans-serif;
+
+  --font-sans: 'InterVariable', sans-serif;
+  --font-serif: 'PlayfairDisplay', serif;
+  --font-system-ui: system-ui, sans-serif;
+  --font-transitional: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
+  --font-old-style: Iowan Old Style, Palatino Linotype, URW Palladio L, P052, serif;
+  --font-humanist: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro,
+    sans-serif;
+  --font-geometric-humanist: Avenir, Montserrat, Corbel, URW Gothic, source-sans-pro, sans-serif;
+  --font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+  --font-neo-grotesque: Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif;
+  --font-monospace-slab-serif: Nimbus Mono PS, Courier New, monospace;
+  --font-monospace-code: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono,
+    Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo, Consolas, DejaVu Sans Mono,
+    monospace;
+  --font-industrial: Bahnschrift, DIN Alternate, Franklin Gothic Medium, Nimbus Sans Narrow,
+    sans-serif-condensed, sans-serif;
+  --font-rounded-sans: ui-rounded, Hiragino Maru Gothic ProN, Quicksand, Comfortaa, Manjari,
+    Arial Rounded MT, Arial Rounded MT Bold, Calibri, source-sans-pro, sans-serif;
+  --font-slab-serif: Rockwell, Rockwell Nova, Roboto Slab, DejaVu Serif, Sitka Small, serif;
+  --font-antique: Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro,
+    Georgia, serif;
+  --font-didone: Didot, Bodoni MT, Noto Serif Display, URW Palladio L, P052, Sylfaen, serif;
+  --font-handwritten: Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive;
 }
 
 @theme {
@@ -21,7 +46,7 @@
   --hue-zinc: 1;
   --hue-wine: 7;
 
-  --swatch1: oklch(94% 0.04 var(--hue-purple));
+  --swatch1: oklch(99.9% 0 0);
   --swatch2: oklch(89% 0.09 var(--hue-purple));
   --swatch3: oklch(74% 0.24 var(--hue-purple));
   --swatch4: oklch(65% 0.33 var(--hue-purple));
@@ -30,17 +55,17 @@
   --swatch7: oklch(35% 0.18 var(--hue-purple));
   --swatch8: oklch(25% 0.12 var(--hue-purple));
   --swatch9: oklch(20% 0.06 var(--hue-purple));
-  --swatch10: oklch(13% 0.06 var(--hue-purple));
+  --swatch10: oklch(0% 0 0);
 
-  --color-text1: var(--swatch1);
-  --color-text2: var(--swatch2);
+  --color-text1: var(--swatch10);
+  --color-text2: var(--swatch9);
   --color-link: var(--swatch3);
   --color-primary: var(--swatch6);
   --color-border: var(--swatch3);
   --color-bar: var(--swatch6);
-  --color-surface1: var(--swatch10);
-  --color-surface2: var(--swatch9);
-  --color-surface3: var(--swatch8);
+  --color-surface1: var(--swatch1);
+  --color-surface2: var(--swatch2);
+  --color-surface3: var(--swatch3);
 }
 
 /* Apply dark mode adjustments without repeating :root */
@@ -81,4 +106,31 @@
   --text-fluid-8: clamp(10rem, 20vw, 15rem);
   --text-fluid-9: clamp(15rem, 30vw, 20rem);
   --text-fluid-10: clamp(20rem, 40vw, 30rem);
+}
+
+@theme {
+  --font-sans: 'InterVariable', sans-serif;
+  --font-serif: 'PlayfairDisplay', serif;
+  --font-display: 'zentry', sans-serif;
+  --font-system-ui: system-ui, sans-serif;
+  --font-transitional: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
+  --font-old-style: Iowan Old Style, Palatino Linotype, URW Palladio L, P052, serif;
+  --font-humanist: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro,
+    sans-serif;
+  --font-geometric-humanist: Avenir, Montserrat, Corbel, URW Gothic, source-sans-pro, sans-serif;
+  --font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+  --font-neo-grotesque: Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif;
+  --font-monospace-slab-serif: Nimbus Mono PS, Courier New, monospace;
+  --font-monospace-code: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono,
+    Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo, Consolas, DejaVu Sans Mono,
+    monospace;
+  --font-industrial: Bahnschrift, DIN Alternate, Franklin Gothic Medium, Nimbus Sans Narrow,
+    sans-serif-condensed, sans-serif;
+  --font-rounded-sans: ui-rounded, Hiragino Maru Gothic ProN, Quicksand, Comfortaa, Manjari,
+    Arial Rounded MT, Arial Rounded MT Bold, Calibri, source-sans-pro, sans-serif;
+  --font-slab-serif: Rockwell, Rockwell Nova, Roboto Slab, DejaVu Serif, Sitka Small, serif;
+  --font-antique: Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro,
+    Georgia, serif;
+  --font-didone: Didot, Bodoni MT, Noto Serif Display, URW Palladio L, P052, Sylfaen, serif;
+  --font-handwritten: Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive;
 }

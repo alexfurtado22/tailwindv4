@@ -17,6 +17,8 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw; /* Fallback */
+  width: 100dvw; /* Modern browsers */
   background: var(--color-surface1, oklch(0% 0 0)); /* Default white background */
   color: var(--color-text1, oklch(99% 0 0)); /* Default black text */
   font-family: var(
@@ -74,6 +76,34 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--color-surface3);
-  outline: 1px solid var(--color-surface3);
+  background-color: var(--color-primary);
+  outline: 1px solid var(--color-primary);
+}
+html,
+body {
+  overflow-x: clip; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'InterVariable';
+  src: url('/fonts/InterVariable.woff2') format('woff2');
+  font-weight: 100 900; /* Specifies the range of weights if it's variable */
+  font-style: normal;
+  font-display: swap; /* Keeps swap keyword in the correct property */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/Playfair-Display.woff2') format('woff2');
+  font-weight: 400 900; /* Adjust range based on support */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'zentry';
+  src: url('/fonts/zentry-regular.woff2') format('woff2');
+  font-weight: 100 900; /* Adjust range based on support */
+  font-style: normal;
+  font-display: swap;
 }

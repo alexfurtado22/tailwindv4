@@ -1,5 +1,35 @@
 @import 'tailwindcss';
 
+:where(html) {
+  --ratio-square: 1;
+  --ratio-landscape: 4/3;
+  --ratio-portrait: 3/4;
+  --ratio-widescreen: 16/9;
+  --ratio-ultrawide: 18/5;
+  --ratio-golden: 1.618/1;
+}
+
+@utility aspect-square {
+  aspect-ratio: var(--ratio-square);
+}
+
+@utility aspect-landscape {
+  aspect-ratio: var(--ratio-landscape);
+}
+
+@utility aspect-portrait {
+  aspect-ratio: var(--ratio-portrait);
+}
+@utility aspect-widescreen {
+  aspect-ratio: var(--ratio-widescreen);
+}
+@utility aspect-ultrawide {
+  aspect-ratio: var(--ratio-ultrawide);
+}
+@utility aspect-golden {
+  aspect-ratio: var(--ratio-golden);
+}
+
 @utility section {
   margin-top: 5rem;
 }
@@ -22,16 +52,30 @@
     box-shadow 0.3s;
 }
 
-@layer utilities {
-  .btn-hover {
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 14px 28px oklch(69.55% 0.31 331.65 / 25%),
-        0 10px 10px oklch(69.55% 0.31 331.65 / 22%),
-        0 0 120px -10px var(--clr-neon-pink);
-    }
+@utilities btn-hover {
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 14px 28px oklch(69.55% 0.31 331.65 / 25%),
+      0 10px 10px oklch(69.55% 0.31 331.65 / 22%),
+      0 0 120px -10px var(--clr-neon-pink);
   }
+}
+
+@utility special-font {
+  font-family: 'Zentry';
+  font-feature-settings: 'ss01' on;
+}
+
+@utility mask-clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@utility absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @utility holder {
@@ -57,6 +101,54 @@
 @utility loaded {
   filter: blur(0) grayscale(0);
   transition: 0.7s ease-in-out;
+}
+
+@utility nav-hover-btn {
+  position: relative;
+  margin-inline-start: 2.5rem; /* Equivalent to Tailwind ms-10 */
+  font-size: 0.75rem; /* Equivalent to Tailwind text-xs */
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.125rem; /* Equivalent to Tailwind -bottom-0.5 */
+    left: 0;
+    height: 2px; /* Equivalent to Tailwind h-[2px] */
+    width: 100%; /* Equivalent to Tailwind w-full */
+    transform-origin: bottom right; /* Equivalent to Tailwind origin-bottom-right */
+    transform: scaleX(0); /* Equivalent to Tailwind scale-x-0 */
+    background-color: var(--color-primary); /* Equivalent to Tailwind bg-neutral-800 */
+    transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1); /* Equivalent to Tailwind ease-[cubic-bezier(0.65_0.05_0.36_1)] */
+  }
+
+  &:hover::after {
+    transform-origin: bottom left; /* Equivalent to Tailwind hover:origin-bottom-left */
+    transform: scaleX(1); /* Equivalent to Tailwind hover:scale-x-100 */
+  }
+
+  &:dark::after {
+    background-color: var(--color-primary); /* Equivalent to Tailwind dark:after:bg-white */
+  }
+}
+
+@utility transition-fade {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+@utility visible-fade {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@utility hidden-fade {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none; /* Ensures the hidden drawer is not interactable */
 }
 
 /* xxs */

@@ -13,7 +13,7 @@
 
 /* Global properties for the grid system */
 * {
-  --minItemWidth: 300px;
+  --minItemWidth: 350px;
   --minHeight: 80vh;
   --gutter: 2rem;
 

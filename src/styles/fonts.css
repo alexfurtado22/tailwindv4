@@ -1,3 +1,8 @@
+:root {
+  --font-display: 'InterVariable', sans-serif;
+  --font-display: 'PlayfairDisplay', serif;
+}
+
 @font-face {
   font-family: 'InterVariable';
   src: url('/fonts/InterVariable.woff2') format('woff2');
@@ -8,13 +13,13 @@
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/Playfair-Display.woff2') format('woff2');
   font-weight: 400 900; /* Adjust range based on support */
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-sans: 'InterVariable', sans-serif;
-  --font-serif: 'PlayfairDisplay', serif;
+  --font-sans: 'InterVariable', 'sans-serif';
+  --font-serif: 'PlayfairDisplay', 'serif';
 }
